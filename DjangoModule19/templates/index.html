@@ -1,0 +1,34 @@
+{% extends "menu.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block style %}
+        {{block.super}}
+    {% endblock %}
+    <title>Главная страница</title>
+
+</head>
+
+<body>
+
+    {% block pagename %}
+    <h1>Главная страница</h1>
+        {{block.super}}
+
+    {% endblock %}
+
+
+    {% block menu %}
+        {{block.super}}
+    {% endblock %}
+
+    {% block content %}
+        {{block.super}}
+    {% endblock %}
+
+
+</body>
+</html>

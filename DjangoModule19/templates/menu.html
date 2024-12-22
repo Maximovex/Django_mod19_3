@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block style %}
+        <link rel="stylesheet" type='text/css' href='{% static "style.css" %}'>
+    {% endblock %}
+
+    {% block title %}<title>Главная страница</title>{% endblock %}
+</head>
+
+
+<body>
+<main>
+    {% block pagename %} <hr> {% endblock %}
+</main>
+    {% block menu %}
+        <p><h2><a href="/">Главная</a><br></h2>
+        <p><h2><a href="/store">Магазин</a><br></h2>
+        <p><h2><a href="/bin">Корзина</a></h2>
+    {% endblock %}
+
+    {% block content %}
+        <hr>
+
+    {% endblock %}
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "menu.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block style %}
+        {{block.super}}
+    {% endblock %}
+
+    {% block title %}
+        <title>Магазин</title>
+    {% endblock %}
+
+
+</head>
+<body>
+
+    {% block pagename %}
+        <h1>Магазин</h1>
+    {% endblock %}
+
+    {% block menu %}
+        {{block.super}}
+    {% endblock %}
+
+    {% block content %}
+        {{block.super}}
+
+        <ul>
+            {% for game in games %}
+            <p><li>{{ game }}</li><button>Купить</button></p>
+            {% endfor %}
+        </ul>
+        <hr>
+    {% endblock %}
+
+</body>
+</html>
